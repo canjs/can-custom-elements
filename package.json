@@ -49,7 +49,7 @@
     "can-stache": "^3.0.18",
     "can-stache-bindings": "^3.0.6",
     "cloudydom": "1.0.6",
-    "detect-cyclic-packages": "^1.0.0",
+    "detect-cyclic-packages": "^1.0.1",
     "documentjs": "^0.4.4",
     "done-serve": "^1.0.0-alpha.0",
     "donejs-cli": "^1.0.0-alpha.2",
