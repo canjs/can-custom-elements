@@ -16,10 +16,10 @@ Create a base Element class based on `Element`, any element that derives from [H
 
 **Important**: Safari only supports custom elements that derive from [HTMLElement].
 
-```js
-var CustomElement = require("can-element");
+```javascript
+import CustomElement from "can-element";
 
-var SuperButton = class extends CustomElement(HTMLButtonElement) {
+const SuperButton = class extends CustomElement(HTMLButtonElement) {
 
 };
 
@@ -37,28 +37,28 @@ customElements.define("super-button", SuperButton);
 
 Use can-element to create a class that can be passed into [customElements.define](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define) to register the element in the window.
 
-```js
-var Element = require("can-element").Element;
-var stache = require("can-stache");
-var define = require("can-define");
+```javascript
+import {Element} from "can-element";
+import stache from "can-stache";
+import define from "can-define";
 
-var view = stache("Hello {{name}}");
+const view = stache("Hello {{name}}");
 
-var MyApp = class extends Element {
-	static get view() {
-		return view;
-	}
+const MyApp = class extends Element {
+  static get view() {
+    return view;
+  }
 };
 
 define(MyApp.prototype, {
-	name: {
-		value: "world"
-	}
+  name: {
+    value: "world"
+  }
 });
 
 customElements.define("my-app", MyApp);
 
-var el = document.createElement("my-app");
+const el = document.createElement("my-app");
 
 el.name; // -> "world"
 ```
