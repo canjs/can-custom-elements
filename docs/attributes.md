@@ -13,23 +13,23 @@ To use this [can-define] behavior just import it. For any defined property on th
 
 Since the [can-define.types.type] can still be specified, you can have properties which are typed even though the attribute will always be a string.
 
-```javascript
+```js
 import define from "can-define";
 import {Element} from "can-element";
 import view from "./calc.stache";
 import defineAttr from "can-element/attributes";
 
 const Calculator = class extends Element {
-  static get view() {
-    return view;
-  }
+	static get view() {
+		return view;
+	}
 };
 
 define(Calculator.prototype, {
-  num: {
-    type: "number",
-    attribute: true
-  }
+	num: {
+		type: "number",
+		attribute: true
+	}
 });
 
 defineAttr(Calculator);
