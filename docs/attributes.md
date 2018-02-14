@@ -15,7 +15,7 @@ Since the [can-define.types.type] can still be specified, you can have propertie
 
 ```js
 import define from "can-define";
-import {Element} from "can-element";
+import { Element } from "can-element";
 import view from "./calc.stache";
 import defineAttr from "can-element/attributes";
 
@@ -25,20 +25,20 @@ const Calculator = class extends Element {
 	}
 };
 
-define(Calculator.prototype, {
+define( Calculator.prototype, {
 	num: {
 		type: "number",
 		attribute: true
 	}
-});
+} );
 
-defineAttr(Calculator);
+defineAttr( Calculator );
 
-customElements.define("my-calculator", Calculator);
+customElements.define( "my-calculator", Calculator );
 
 const el = new Calculator();
 
-el.setAttribute("num", "34");
+el.setAttribute( "num", "34" );
 
 el.num; // -> 34
 ```

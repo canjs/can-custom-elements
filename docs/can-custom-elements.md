@@ -19,11 +19,11 @@ Create a base Element class based on `Element`, any element that derives from [H
 ```js
 import CustomElement from "can-element";
 
-const SuperButton = class extends CustomElement(HTMLButtonElement) {
+const SuperButton = class extends CustomElement( HTMLButtonElement ) {
 
 };
 
-customElements.define("super-button", SuperButton);
+customElements.define( "super-button", SuperButton );
 ```
 
 @param {HTMLElement} Element The base element from which to derive.
@@ -38,11 +38,11 @@ customElements.define("super-button", SuperButton);
 Use can-element to create a class that can be passed into [customElements.define](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define) to register the element in the window.
 
 ```js
-import {Element} from "can-element";
+import { Element } from "can-element";
 import stache from "can-stache";
 import define from "can-define";
 
-const view = stache("Hello {{name}}");
+const view = stache( "Hello {{name}}" );
 
 const MyApp = class extends Element {
 	static get view() {
@@ -50,15 +50,15 @@ const MyApp = class extends Element {
 	}
 };
 
-define(MyApp.prototype, {
+define( MyApp.prototype, {
 	name: {
 		value: "world"
 	}
-});
+} );
 
-customElements.define("my-app", MyApp);
+customElements.define( "my-app", MyApp );
 
-const el = document.createElement("my-app");
+const el = document.createElement( "my-app" );
 
 el.name; // -> "world"
 ```

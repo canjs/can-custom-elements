@@ -4,7 +4,7 @@
 A static getter that returns the renderer function used to render the element's shadow DOM.
 
 ```js
-import {Element} from "can-element";
+import { Element } from "can-element";
 import view from "./some-template.stache";
 
 class MyApp extends Element {
@@ -13,5 +13,5 @@ class MyApp extends Element {
 	}
 }
 
-customElements.define("my-app", MyApp);
+customElements.define( "my-app", MyApp );
 ```

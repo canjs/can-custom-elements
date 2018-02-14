@@ -11,9 +11,10 @@ Element is a [can-element.CanElement] that is derived from the [HTMLElement](htt
 To use this element, just extend your own element based off of it:
 
 ```js
-import {Element} from "can-element";
+import { Element } from "can-element";
 
 class MyElement extends Element {
+
 	// ...
 }
 ```
